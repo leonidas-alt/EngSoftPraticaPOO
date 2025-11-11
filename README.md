@@ -122,13 +122,13 @@ O encapsulamento é um dos pilares fundamentais da POO que consiste em:
 
 Todos os exercícios são baseados em entidades e situações de uma **escola de ensino superior**:
 
-- **👨‍🎓 Aluno**: Matrícula, notas, disciplinas
-- **👨‍🏫 Professor**: Salário, departamento, disciplinas
-- **👨‍💼 Funcionário**: Cargo, salário, dados pessoais
-- **📖 Disciplina**: Código, carga horária, alunos matriculados
-- **🎓 Curso**: Disciplinas, carga horária total
-- **🏢 Departamento**: Professores, área de atuação
-- **🏛️ Secretaria**: Gerenciamento de matrículas
+- **Aluno**: Matrícula, notas, disciplinas
+- **Professor**: Salário, departamento, disciplinas
+- **Funcionário**: Cargo, salário, dados pessoais
+- **Disciplina**: Código, carga horária, alunos matriculados
+- **Curso**: Disciplinas, carga horária total
+- **Departamento**: Professores, área de atuação
+- **Secretaria**: Gerenciamento de matrículas
 
 ## Como Usar
 
@@ -141,6 +141,49 @@ Todos os exercícios são baseados em entidades e situações de uma **escola de
 5. **Teste localmente**: Execute e verifique se atende aos requisitos
 6. **Commit e push**: Envie suas alterações para seu fork
 7. **Abra um Pull Request**: Submeta sua solução para correção automática
+
+### Executando Testes Localmente
+
+Antes de submeter sua solução, você pode executar os testes localmente para verificar se sua implementação está correta:
+
+#### Pré-requisitos
+```bash
+# Instale as dependências
+pip install -r requirements.txt
+```
+
+#### Executando um teste específico
+```bash
+# Para testar apenas o exercício 1
+python -m pytest tests/test_exercicio01.py -v
+
+# Para testar apenas o exercício 2
+python -m pytest tests/test_exercicio02.py -v
+```
+
+#### Executando todos os testes
+```bash
+# Executa todos os testes do projeto
+python -m pytest tests/ -v
+```
+
+#### Interpretando a saída dos testes
+- **PASSED**: Teste passou - sua implementação está correta
+- **FAILED**: Teste falhou - verifique a mensagem de erro
+- **ERROR**: Erro de importação - verifique o nome do arquivo
+
+#### Exemplo de saída de teste bem-sucedido
+```
+tests/test_exercicio01.py::test_aluno_creation PASSED
+tests/test_exercicio01.py::test_disciplina_creation PASSED
+tests/test_exercicio01.py::test_aluno_attributes PASSED
+```
+
+#### Exemplo de saída com erro
+```
+tests/test_exercicio01.py::test_aluno_creation FAILED
+E   AttributeError: 'Aluno' object has no attribute 'nome'
+```
 
 ### Correção Automática
 
