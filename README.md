@@ -103,6 +103,44 @@ O encapsulamento é um dos pilares fundamentais da POO que consiste em:
 - **Uso Comum**: Funções utilitárias relacionadas ao domínio da classe
 - **Acesso**: Podem ser chamados pela classe ou instâncias, mas funcionam como funções normais
 
+### Princípios SOLID
+
+#### Single Responsibility Principle (SRP)
+- **Definição**: Uma classe deve ter apenas uma razão para mudar
+- **Objetivo**: Cada classe deve ter uma única responsabilidade
+- **Benefícios**: Código mais coeso, fácil manutenção e teste
+
+#### Open/Closed Principle (OCP)
+- **Definição**: Aberto para extensão, fechado para modificação
+- **Objetivo**: Adicionar funcionalidades sem alterar código existente
+- **Implementação**: Uso de abstrações e polimorfismo
+
+#### Liskov Substitution Principle (LSP)
+- **Definição**: Objetos de subclasses devem substituir objetos da superclasse
+- **Objetivo**: Manter comportamento consistente na hierarquia
+- **Regra**: Subclasses não devem quebrar contratos da classe base
+
+#### Interface Segregation Principle (ISP)
+- **Definição**: Clientes não devem depender de interfaces que não usam
+- **Objetivo**: Interfaces pequenas e específicas
+- **Benefícios**: Menor acoplamento e maior flexibilidade
+
+#### Dependency Inversion Principle (DIP)
+- **Definição**: Depender de abstrações, não de implementações
+- **Objetivo**: Reduzir acoplamento entre módulos
+- **Técnica**: Injeção de dependência
+
+### Padrões de Projeto
+
+#### Padrões Estruturais
+- **Adapter**: Permite que interfaces incompatíveis trabalhem juntas
+- **Decorator**: Adiciona comportamentos a objetos dinamicamente
+- **Facade**: Fornece interface simplificada para subsistema complexo
+
+#### Padrões Comportamentais
+- **Observer**: Define dependência um-para-muitos entre objetos
+- **Strategy**: Encapsula algoritmos e os torna intercambiáveis
+
 ## Lista de Exercícios
 
 | Exercício | Conceito Principal | Descrição | Link |
@@ -117,6 +155,26 @@ O encapsulamento é um dos pilares fundamentais da POO que consiste em:
 | 08 | **Métodos de Classe** | Factory methods com @classmethod | [Exercício 08](exercicio_08.md) |
 | 09 | **Polimorfismo** | Diferentes implementações do mesmo método | [Exercício 09](exercicio_09.md) |
 | 10 | **Jogo dos 7 Erros** | Identificação e correção de erros comuns | [Exercício 10](exercicio_10.md) |
+
+### Princípios SOLID
+
+| Exercício | Princípio | Descrição | Link |
+|-----------|-------------|-----------|------|
+| 11 | **SRP - Responsabilidade Única** | Separação de responsabilidades em classes | [Exercício 11](exercicio_11.md) |
+| 12 | **OCP - Aberto/Fechado** | Extensão sem modificação | [Exercício 12](exercicio_12.md) |
+| 13 | **LSP - Substituição de Liskov** | Substituição de objetos sem quebrar funcionalidade | [Exercício 13](exercicio_13.md) |
+| 14 | **ISP - Segregação de Interface** | Interfaces específicas e coesas | [Exercício 14](exercicio_14.md) |
+| 15 | **DIP - Inversão de Dependência** | Dependência de abstrações | [Exercício 15](exercicio_15.md) |
+
+### Padrões de Projeto
+
+| Exercício | Padrão | Descrição | Link |
+|-----------|--------|-----------|------|
+| 16 | **Adapter (Estrutural)** | Integração de interfaces incompatíveis | [Exercício 16](exercicio_16.md) |
+| 17 | **Decorator (Estrutural)** | Adição dinâmica de funcionalidades | [Exercício 17](exercicio_17.md) |
+| 18 | **Facade (Estrutural)** | Simplificação de interface complexa | [Exercício 18](exercicio_18.md) |
+| 19 | **Observer (Comportamental)** | Notificação de mudanças de estado | [Exercício 19](exercicio_19.md) |
+| 20 | **Strategy (Comportamental)** | Alternância de algoritmos dinamicamente | [Exercício 20](exercicio_20.md) |
 
 ## Contexto dos Exercícios
 
@@ -135,7 +193,7 @@ Todos os exercícios são baseados em entidades e situações de uma **escola de
 ### Para Estudantes
 
 1. **Fork este repositório**: Clique em "Fork" no GitHub para criar sua cópia
-2. **Clone seu fork**: `git clone https://github.com/SEU_USUARIO/EngSoftPraticaPOO.git`
+2. **Clone seu fork**: `https://github.com/AleTavares/poo-python-exercises.git`
 3. **Leia o exercício**: Cada arquivo `.md` contém a descrição detalhada
 4. **Implemente sua solução**: Crie o arquivo Python solicitado
 5. **Teste localmente**: Execute e verifique se atende aos requisitos
@@ -203,13 +261,16 @@ Para que a correção automática funcione, nomeie seus arquivos corretamente:
 - `respExercicio03.py` - Exercício 3
 - ...
 - `Resposta_10.py` - Exercício 10 (Jogo dos 7 Erros)
+- `respExercicio11.py` - Exercício 11 (SRP)
+- ...
+- `respExercicio20.py` - Exercício 20 (Strategy)
 
 ### Fluxo de Trabalho
 
 ```bash
 # 1. Fork e clone
-git clone https://github.com/SEU_USUARIO/EngSoftPraticaPOO.git
-cd EngSoftPraticaPOO
+git clone https://github.com/AleTavares/poo-python-exercises.git
+cd poo-python-exercises
 
 # 2. Crie uma branch para seu exercício
 git checkout -b exercicio-01
@@ -261,6 +322,8 @@ Os exercícios foram organizados em ordem crescente de complexidade:
 2. **Intermediário** (Ex. 4-6): Herança, composição
 3. **Avançado** (Ex. 7-9): Relacionamentos complexos, polimorfismo
 4. **Desafio** (Ex. 10): Identificação e correção de erros
+5. **SOLID** (Ex. 11-15): Princípios de design orientado a objetos
+6. **Design Patterns** (Ex. 16-20): Padrões de projeto estruturais e comportamentais
 
 ## Testes Automáticos
 
